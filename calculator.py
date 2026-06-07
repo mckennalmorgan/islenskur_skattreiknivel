@@ -14,10 +14,10 @@ def calculate_monthly_tax(
         {"limit": float('inf'), "rate": 0.4599}
     ]
     taxable_income = monthly_income * (1 - pension_credit)
-    print("\n\n========================================== \n")
+    print("\n========================================== \n")
     print(f"Your taxable monthly income is {taxable_income:.2f}\n")
-    print(f"Your personal tax credit is {personal_credit}.\n")
-    print("\n========================================== \n\n")
+    print(f"Your personal tax credit is {personal_credit}")
+    print("\n========================================== \n")
 
 
     tax = 0
@@ -29,14 +29,14 @@ def calculate_monthly_tax(
         previous_bracket = bracket["limit"]
     tax = tax - personal_credit
 
-    print("\n\n========================================== \n")
-    print(f"Your total monthly tax is {tax:.2f}.\n")
+    print("========================================== \n")
+    print(f"Your total monthly tax is {tax:.2f}\n")
     print(f"Your net salary after taxes is {taxable_income - tax:.2f}\n")
-    print("\n========================================== \n\n")
+    print(f"Your tax rate is {tax / taxable_income*100:.2f}%")
+    print("\n========================================== \n")
 
 if __name__ == "__main__":
-    print("\n\n========================================== \n")
+    print("\n========================================== \n")
     monthly_income = float(input("What is your monthly income? "))
-    print("\n==========================================")
-
+    
     calculate_monthly_tax(monthly_income)
