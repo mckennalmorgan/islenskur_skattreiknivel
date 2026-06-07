@@ -1,3 +1,8 @@
+# TODO:
+# [x] Finish calculator
+# [ ] Turn tax values into yaml config file
+# [ ] Add in union fees, etc.
+
 def calculate_monthly_tax(
     monthly_income,
     pension_credit=0.04,
